@@ -1,0 +1,17 @@
+<form action="usertypepost" method="post">
+    {% csrf_token %}
+    <div class="form-group" >
+     
+      <select class="form-control" id="user_type" name='user_type'>
+        <option>Staff</option>
+        <option>Vendor</option>
+        <option>Customer</option>
+        
+      </select>
+    
+    
+          <input type="submit" action="usertypepost" value="Save">
+      </div>
+    
+   
+  </form>

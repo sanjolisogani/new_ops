@@ -1,0 +1,160 @@
+<form action="customerpost" method="post">
+    {%csrf_token%}
+    <div class="form-group" >
+        <label for="name">name</label>
+        <input type="text" class="form-control" id="name" name='company_name'>
+      </div>
+      <div class="form-group">
+          <label for="address">Addres</label>
+          <textarea class="form-control" id="address" rows="3" name='address'></textarea>
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" class="form-control" id="city" name='city'>
+        </div>
+      <div class="form-group">
+        <label for="country">Countries</label>
+        <select class="form-control" id="country" name='country'>
+          <option>India</option>
+          <option>USA</option>
+          <option>Canada</option>
+        </select>
+      </div>
+      <div class="form-group">
+          <label for="zipcode">Zip Code</label>
+          <input type="text" class="form-control" id="zipcode" name='zip_code' maxlength="7">
+        </div>
+        <div class="form-group">
+            <label for="contact">Phone</label>
+            <input type="phone" class="form-control" id="contact" name='primary_contact_person' maxlength="10">
+          </div>
+          <div class="form-group">
+              <label for="designation">Designation</label>
+              <input type="text" class="form-control" id="designation" name="designation">
+
+          </div>
+          <div class="form-group">
+            <label for="pmail"> primary Email</label>
+            <input type="email" class="form-control" id="pmail" name='primary_email'>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="s_contact"> Secondary Phone</label>
+                    <input type="phone" class="form-control" id="s_contact" name='secondary_contact_person' maxlength="10">
+                  </div>
+                  <div class="form-group">
+                      <label for="s_designation">Secondary Designation</label>
+                      <input type="text" class="form-control" id="s_designation" name="s_designation">
+        
+                  </div>
+                  <div class="form-group">
+                    <label for="smail"> Secondary Email</label>
+                    <input type="email" class="form-control" id="smail" name='secondary_email'>
+                    <div class="form-group">
+
+                       
+                          <label for="web">Website</label>
+                          <input type="url" class="form-control" id="web" name='website'>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gst">GST</label>
+                            <input type="number" class="form-control" id="gst" name='gst'>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="vat"> VAT</label>
+                            <input type="number" class="form-control" id="vat" name='vat'>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="installation">Installation Mode</label>
+                            <select class="form-control" id="country" name='installation_mode'>
+                              <option>Edge</option>
+                              <option>Cloud</option>
+                              <option>Hybrid</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+
+
+                        <div class="form-group">
+                            <label for="sites"> Number oF SItes</label>
+                            <input type="number" class="form-control" id="sites" name='no_of_site'>
+                          </div>
+
+                          <div class="form-group" >
+                            <label for="sitename">site1</label>
+                            <input type="text" class="form-control" id="name" name='site1'>
+                          </div>
+                          <div class="form-group">
+                              <label for="address1">Address1</label>
+                              <textarea class="form-control" id="address1" rows="3" name='address_site1'></textarea>
+                            </div>
+                            <div class="form-group">
+                              <label for="city1">City1</label>
+                              <input type="text" class="form-control" id="city1" name='city_site1'>
+                            </div>
+                          <div class="form-group">
+                            <label for="country1">Countries1</label>
+                            <select class="form-control" id="country1" name='country_site1'>
+                              <option>India</option>
+                              <option>USA</option>
+                              <option>Canada</option>
+                            </select>
+                          </div>
+
+
+                          <div class="form-group" >
+                            <label for="sitename2">site2</label>
+                            <input type="text" class="form-control" id="name" name='site2'>
+                          </div>
+                          <div class="form-group">
+                              <label for="address2">Address2</label>
+                              <textarea class="form-control" id="address2" rows="3" name='address_site2'></textarea>
+                            </div>
+                            <div class="form-group">
+                              <label for="city2">City2</label>
+                              <input type="text" class="form-control" id="city2" name='city_site2'>
+                            </div>
+                          <div class="form-group">
+                            <label for="country2">Countries2</label>
+                            <select class="form-control" id="country2" name='country_site2'>
+                              <option>India</option>
+                              <option>USA</option>
+                              <option>Canada</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group" >
+                            <label for="sitename3">site3</label>
+                            <input type="text" class="form-control" id="name3" name='site3'>
+                          </div>
+                          <div class="form-group">
+                              <label for="address3">Address3</label>
+                              <textarea class="form-control" id="address3" rows="3" name='address_site3'></textarea>
+                            </div>
+                            <div class="form-group">
+                              <label for="city3">City3</label>
+                              <input type="text" class="form-control" id="city3" name='city_site3'>
+                            </div>
+                          <div class="form-group">
+                            <label for="country3">Countries3</label>
+                            <select class="form-control" id="country3" name='country_site3'>
+                              <option>India</option>
+                              <option>USA</option>
+                              <option>Canada</option>
+                            </select>
+                          </div>
+
+                          <br>
+
+                    Application
+                    <select class="form-control" id="app" name='application'>
+                    {% for g in appquery %} 
+                    <option value="{{g.app_name}}">{{g.app_name}}</option>
+                          
+                    {% endfor %}
+                  </select>
+                  <br>
+                  <input type="submit" action="customerpost" value="Save">
+</form>

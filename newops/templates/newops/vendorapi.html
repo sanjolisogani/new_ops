@@ -1,0 +1,58 @@
+<form action="vendorpost" method="post">
+    {% csrf_token %}
+    <div class="form-group" >
+      <label for="name">name</label>
+      <input type="text" class="form-control" id="name" name='vendor_name'>
+    </div>
+    <div class="form-group">
+        <label for="address">Addres</label>
+        <textarea class="form-control" id="address" rows="3" name='vendor_address'></textarea>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" name='vendor_city'>
+      </div>
+    <div class="form-group">
+      <label for="country">Countries</label>
+      <select class="form-control" id="country" name='vendor_country'>
+        <option>India</option>
+        <option>USA</option>
+        <option>Canada</option>
+      </select>
+    </div>
+    <div class="form-group">
+        <label for="zipcode">Zip Code</label>
+        <input type="text" class="form-control" id="zipcode" name='zip_code'>
+      </div>
+      <div class="form-group">
+        <label for="contact">Phone</label>
+        <input type="phone" class="form-control" id="contact" name='vendor_contact' maxlength="10">
+      </div>
+      <div class="form-group">
+        <label for="emmail">Email</label>
+        <input type="email" class="form-control" id="emmail" name='vendor_email'>
+        <div class="form-group">
+            <label for="web">Website</label>
+            <input type="url" class="form-control" id="web" name='web'>
+          </div>
+          <div class="form-group">
+            <label for="vat">VAT</label>
+            <input type="text" class="form-control" id="vat" name='vendor_VAT'>
+          </div>
+          <div class="form-group">
+            <label for="other1">Other1</label>
+            <input type="text" class="form-control" id="other1" name='vendor_other1'>
+          </div>
+          <div class="form-group">
+            <label for="other2">Other2</label>
+            <input type="text" class="form-control" id="other2"  name='vendor_other2'>
+          </div>
+          <div class="form-group">
+            <label for="other3">Other3</label>
+            <input type="text" class="form-control" id="other3"  name='vendor_other3'>
+          </div>
+          <input type="submit" action="vendorpost" value="Save">
+      </div>
+    
+   
+  </form>

@@ -1,0 +1,31 @@
+
+{% load rest_framework %}
+
+<html><body>
+
+<form action="applicationapipost" method="POST">
+    {% csrf_token %}
+    <div class="form-group" >
+        <label for="name">APP NAME</label>
+        <input type="text" class="form-control" id="name" name='app_name'>
+      </div>
+      <div class="form-group" >
+          <label for="func">APP FUNCTION</label>
+          <input type="text" class="form-control" id="func" name='app_function'>
+        </div>
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="app_type" id="gridRadios1" value="Source" checked>
+          <label class="form-check-label" for="gridRadios1">
+            Source
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="app_type" id="gridRadios2" value="End">
+          <label class="form-check-label" for="gridRadios2">
+            End
+          </label>
+    <input type="submit" action="applicationapipost" value="Save">
+</form>
+
+</body></html>

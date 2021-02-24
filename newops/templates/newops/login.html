@@ -1,0 +1,12 @@
+
+<h1>Login</h1>
+<form class="site-form" action="/login/" method="post">
+    {% csrf_token %}
+    {{form}}
+    <br>
+    <a href="/reset_password/"> Forget Password </a><br>
+    <a href=""> Need Help? </a><br>
+    <input type="submit" action = "/hello/" value="login">
+</form>
+
+

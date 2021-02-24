@@ -1,0 +1,45 @@
+
+{% load rest_framework %}
+
+<html><body>
+
+<form action="assestapipost" method="POST">
+    
+    {%csrf_token%}
+    Asest Group
+    <br>
+
+    Assest Name <input type="text" name='assestname'>
+    <br>
+    Customer ID:
+    <select class="form-control" id="customer_id" name='Customer_ID_id'>
+    {% for g in customerquery %} 
+        <option value="{{g.company_name}}">{{g.company_name}}</option>
+          
+    {% endfor %}
+  </select><br>
+  Appname:
+  <select class="form-control" id="app" name='app_name' multiple>
+    {% for i in appquery %} 
+        <option value="{{i.app_name}}">{{i.app_name}}</option>
+          
+    {% endfor %}
+  </select><br>
+  Pagename:
+  <select class="form-control" id="page" name='page_name' multiple>
+    {% for i in pagequery %} 
+        <option value="{{i.page_name}}">{{i.page_name}}</option>
+          
+    {% endfor %}
+  </select><br>
+  Devicename:
+  <select class="form-control" id="device" name='device_registration_name' multiple>
+    {% for i in devicequery %} 
+        <option value="{{i.device_registration_name}}">{{i.device_registration_name}}</option>
+          
+    {% endfor %}
+  </select>
+    <input type="submit"  value="Save">
+</form>
+
+</body></html>

@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Things Ally | Coming Soon</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta name="author" content="Things Ally" />
+    <link
+      rel="icon"
+      href="{% static 'ThingsAlly-favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="{%static 'vendor/bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{%static 'vendor/font-aeesome/css/font-awesome.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{%static 'vendor/animate/css/vivify.min.css' %}"
+    />
+    <link rel="stylesheet" href="{%static 'css/site.min.css' %}" />
+    <link rel="stylesheet" href="{%static 'css/custom.css' %}" />
+  </head>
+  <body class="theme-cyan font-montserrat light_version">
+    <div class="page-loader-wrapper">
+      <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+      </div>
+    </div>
+    <div class="coming-soon particles_js">
+      <div class="auth_div vivify fadeInTop">
+        <div class="card">
+          <div class="body">
+            <div class="m-0auto text-center">
+              <p class="lead ink-free-normal">Things Ally Private Limited</p>
+              <p class="lead ink-free-normal">
+                We are working toward simplifying your
+                <span style="font-weight: bold"> IoT journey</span> !
+              </p>
+              <div class="wsize2 row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <span class="s1-txt1 ink-free-normal" style="font-weight: 700"
+                    >Days</span
+                  >
+                  <div class="how-countdown">
+                    <span class="l1-txt1 p-b-9 days ink-free-normal">10</span>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <span class="s1-txt1 ink-free-normal" style="font-weight: 700"
+                    >Hours</span
+                  >
+                  <div class="how-countdown">
+                    <span class="l1-txt1 p-b-9 hours ink-free-normal">11</span>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <span class="s1-txt1 ink-free-normal" style="font-weight: 700"
+                    >Minutes</span
+                  >
+                  <div class="how-countdown">
+                    <span class="l1-txt1 p-b-9 minutes ink-free-normal"
+                      >12</span
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <span class="s1-txt1 ink-free-normal" style="font-weight: 700"
+                    >Seconds</span
+                  >
+                  <div class="how-countdown">
+                    <span class="l1-txt1 p-b-9 seconds ink-free-normal"
+                      >13</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <form
+                  id="email"
+                  class="mb-2 mt-2 col-12"
+                  action="email"
+                  method="POST"
+                >
+                  {% csrf_token %}
+                  <div class="input-group mb-0">
+                    <label for="email"></label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control ink free-normal"
+                      placeholder="Your Email"
+                      style="font-weight: 700"
+                    />
+                    <div class="input-group-append">
+                      <button
+                        name="submit"
+                        type="submit"
+                        class="search_toggle btn btn-success"
+                      >
+                        Get Notified
+                      </button>
+                    </div>
+                  </div>
+                  <span
+                    class="s1-txt4 pt-4 ink-free-normal"
+                    style="font-weight: 700"
+                    >I promise to <span class="bor2">never</span> spam</span
+                  >
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="particles-js"></div>
+    </div>
+    <script src="{%static 'bundles/libscripts.bundle.js' %}"></script>
+    <script src="{%static 'bundles/vendorscripts.bundle.js' %}"></script>
+    <script src="{%static 'bundles/mainscripts.bundle.js' %}"></script>
+    <script src="{%static 'vendor/countdowntime/moment.min.js' %}"></script>
+    <script src="{%static 'vendor/countdowntime/moment-timezone.min.js' %}"></script>
+    <script src="{%static 'vendor/countdowntime/moment-timezone-with-data.min.js' %}"></script>
+    <script src="{%static 'vendor/countdowntime/countdowntime.js' %}"></script>
+    <script>
+      $(".wsize2").countdown100({
+        endtimeYear: 2021,
+        endtimeMonth: 06,
+        endtimeDate: 02,
+        endtimeHours: 0,
+        endtimeMinutes: 0,
+        endtimeSeconds: 0,
+        timeZone: "Asia/Kolkata",
+      });
+    </script>
+  </body>
+</html>

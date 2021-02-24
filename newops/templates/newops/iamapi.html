@@ -1,0 +1,17 @@
+<form action="iampost" method="post">
+    {% csrf_token %}
+    <div class="form-group" >
+     
+      <select class="form-control" id="IAM" name='IAM'>
+        <option>TPM</option>
+        <option>Password</option>
+        <option>Symetric Key</option>
+        <option>X.509 Certificate </option>
+      </select>
+    
+    
+          <input type="submit" action="iampost" value="Save">
+      </div>
+    
+   
+  </form>

@@ -1,0 +1,179 @@
+<form action="devicepost" method="post">
+    {%csrf_token%}
+
+
+    <div class="form-group">
+      <label for="type1">Device Type</label>
+      <select class="form-control" id="ap" name='device_type'>
+        <option>Edge</option>
+        <option>Hardware Gateway</option>
+        <option>Software Gateway</option>
+        <option>Embedded Device</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="enrollment_type" id="gridRadios4" value="True" checked>
+      Enrollment Type
+      <label class="form-check-label" for="gridRadios4">
+        Group
+      </label>
+    </div>
+  <div class="form-check">
+      <input class="form-check-input" type="radio" name="enrollment_type" id="gridRadios4" value="False">
+      Enrollment Type
+      <label class="form-check-label" for="gridRadios4">
+        Individual
+      </label>
+      <br>
+  
+      <div class="form-group" >
+          <label for="name">Device Registration Name</label>
+          <input type="text" class="form-control" id="name" name='device_registration_name'>
+        </div>
+  
+        <div class="form-group" >
+          <label for="make1">Make </label>
+          <input type="text" class="form-control" id="make1" name='make'>
+        </div> 
+  
+      <div class="form-group" >
+          <label for="model1">Model </label>
+          <input type="text" class="form-control" id="model1" name='model'>
+        </div> 
+        <div class="form-group" >
+          <label for="serialno">Serial Number </label>
+          <input type="number" class="form-control" id="serialno" name='serial_number'>
+        </div>
+        <div class="form-group">
+          <label for="dop">Date of Purchase:</label>
+  
+          <input type="date" id="dop" name="date_of_purchase">
+  
+      </div>
+    
+      <div class="form-group">
+        <label for="warrentyp">Warrenty Period:</label>
+        <select class="form-control" id="warrentyp" name='warrenty_period'>
+          <option>1</option>
+          <option>3</option>
+          <option>2</option>
+        </select>
+        </div>  
+      <div class="form-group">
+          <label for="warrentye"> Warrenty expiry:</label>
+  
+          <input type="date" id="warrentye" name="warrenty_expiry">
+  
+      </div>
+      <div class="form-group" >
+          <label for="firmware">Firware Version </label>
+          <input type="text" class="form-control" id="firmware" name='Firmware_version'>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="configuration" id="gridRadios3" value="True" checked>
+          Configuration
+          <label class="form-check-label" for="gridRadios3">
+            Yes
+          </label>
+        </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="configuration" id="gridRadios3" value="False">
+          Configuration
+          <label class="form-check-label" for="gridRadios3">
+            No
+          </label>
+          <br>
+  
+          <div class="form-group">
+              <label for="ss">Secret Key</label>
+              <select class="form-control" id="ss" name='secret_storage'>
+                <option>HSM</option>
+                <option>TPM</option>
+                
+              </select>
+              </div>  
+              <div class="form-group">
+                  <label for="opr">OPeration</label>
+                  <select class="form-control" id="opr" name='operation'>
+                    <option>Register</option>
+                    <option>Reregister</option>
+                    <option>Delete</option>
+                    
+                  </select>
+                  </div>
+  
+                  <br>
+  
+                  IOT HUB
+                  <select class="form-control" id="iot" name='iot_hub_name'>
+                  {% for g in iotquery %} 
+                  <option value="{{g.hub_name}}">{{g.hub_name}}</option>
+                        
+                  {% endfor %}
+                </select>
+                <br>
+                DPS PROPERTY
+                  <select class="form-control" id="dps" name='dps_property_ID'>
+                  {% for h in dpsquery %} 
+                  <option value="{{h.dps_name}}">{{h.dps_name}}</option>
+                        
+                  {% endfor %}
+                </select>
+                <br>
+  
+                <br>
+                VENDOR
+                  <select class="form-control" id="vendor" name='vendor'>
+                  {% for k in vendorquery %} 
+                  <option value="{{k.vendor_name}}">{{k.vendor_name}}</option>
+                        
+                  {% endfor %}
+                </select>
+                <br>
+                sold_to_customer
+                  <select class="form-control" id="soldcustomer" name='sold_to_customer'>
+                  {% for j in customerquery %} 
+                  <option value="{{j.company_name}}">{{j.company_name}}</option>
+                        
+                  {% endfor %}
+                </select>
+                <br>
+  
+                route_to_application
+                  <select class="form-control" id="routetoapp" name='route_to_application'>
+                  {% for l in appquery %} 
+                  <option value="{{l.app_name}}">{{l.app_name}}</option>
+                        
+                  {% endfor %}
+                </select>
+                <br>
+  
+                device_Specification_ID
+                  <select class="form-control" id="devicespec" name='device_Specification_ID'>
+                  {% for m in devicequery %} 
+                  <option value="{{m.device_type}}">{{m.device_type}}</option>
+                        
+                  {% endfor %}
+                </select>
+                <br>
+                IAM mechanism
+                  <select class="form-control" id="iam" name='device_IAM_mechanism'>
+                  {% for m in IAMquery %} 
+                  <option value="{{m.IAM}}">{{m.IAM}}</option>
+                        
+                  {% endfor %}
+                </select>
+                <br>
+  
+                <div class="form-group">
+                  <label for="ap">Allocation Policy</label>
+                  <select class="form-control" id="ap" name='allocation_policy'>
+                    <option>Lowest Latency</option>
+                    <option>Weight Distributed</option>
+                    <option>Static Configuration</option>
+                    <option>Custom(azure function)</option>
+                  </select>
+                </div>
+                <input type="submit" action="devicepost" value="Save">
+</form>

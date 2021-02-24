@@ -1,0 +1,86 @@
+<form action="certificatepost" method="post">
+    {%csrf_token%}
+    <div class="form-group" >
+        <label for="name">name</label>
+        <input type="text" class="form-control" id="name" name='certificate_name'>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="certFile_type" id="gridRadios3" value="True" checked>
+        Certifite File 
+        <label class="form-check-label" for="gridRadios3">
+          True
+        </label>
+      </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="certFile_type" id="gridRadios3" value="False">
+        Certificate File
+        <label class="form-check-label" for="gridRadios3">
+          False
+        </label>
+        <br>
+        <div class="form-group">
+            <label for="generated">Generated On</label>
+
+            <input type="datetime-local" id="generated" name="generatedOn">
+
+        </div>
+        <div class="form-group" >
+            <label for="validity">Validity</label>
+            <input type="text" class="form-control" id="validity" name='validity'>
+          </div>
+
+          <div class="form-group">
+            <label for="uploaded">Uploaded On</label>
+
+            <input type="datetime-local" id="uploaded" name="uploadedOn">
+
+        </div>
+        <div class="form-group">
+            <label for="assigned">Assigned </label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="assigned" id="gridRadios4" value="True" checked>
+                Assigned 
+                <label class="form-check-label" for="gridRadios4">
+                  True
+                </label>
+              </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="assigned" id="gridRadios4" value="False">
+                Assigned
+                <label class="form-check-label" for="gridRadios4">
+                  False
+                </label>
+
+        </div>
+
+        <div class="form-group">
+            <label for="assignedDate">Assigned Date</label>
+
+            <input type="datetime-local" id="assignedDate" name="assignedDate">
+
+        </div>
+
+        <br>
+
+                    CA
+                    <select class="form-control" id="CA" name='ca_name'>
+                    {% for g in caquery %} 
+                    <option value="{{g.CAtype}}">{{g.CAtype}}</option>
+                          
+                    {% endfor %}
+                  </select>
+                  <br>
+
+                  <br>
+
+                  Assigned To
+                  <select class="form-control" id="assignedTo" name='assignedTo'>
+                  {% for g in devicequery %} 
+                  <option value="{{g.Firmware_version}}">{{g.device_registration_name}}</option>
+                        
+                  {% endfor %}
+                </select>
+                <br>
+                <input type="submit" action="certificatepost" value="Save">
+</form>

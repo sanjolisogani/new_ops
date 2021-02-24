@@ -1,0 +1,235 @@
+<form action="devicespecpost" method = "post">
+    {% csrf_token %}
+    <div >
+        Tech Specification ID <input type="text" class="form-control" id="techSpecificationID" name='techSpecificationID'>
+    </div>
+    <div >
+        Tech Specification Name <input type="text" class="form-control" id="techSpecificationName" name='techSpecificationName'>
+    </div>
+    </div>
+    <div class="form-group" >
+      <label for="device_type">Type</label>
+      <input type="text" class="form-control" id="device_type" name='device_type'>
+    </div>
+
+    <div class="form-check form-check-inline">
+        GPS
+          <input class="form-check-input" type="radio" name="gps" id="inlineRadio1" value="True">
+          <label class="form-check-label" for="inlineRadio1">True</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gps" id="inlineRadio1" value="False">
+          <label class="form-check-label" for="inlineRadio1">False</label>
+        </div>
+
+        <div class="form-check form-check-inline">
+            GSM
+            <input class="form-check-input" type="radio" name="gsm" id="inlineRadio2" value="True">
+            <label class="form-check-label" for="inlineRadio2">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gsm" id="inlineRadio2" value="False">
+            <label class="form-check-label" for="inlineRadio2">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            WIFI
+            <input class="form-check-input" type="radio" name="wifi" id="inlineRadio3" value="True">
+            <label class="form-check-label" for="inlineRadio3">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="wifi" id="inlineRadio3" value="False">
+            <label class="form-check-label" for="inlineRadio3">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            BLE
+            <input class="form-check-input" type="radio" name="ble" id="inlineRadio4" value="True">
+            <label class="form-check-label" for="inlineRadio4">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ble" id="inlineRadio4" value="False">
+            <label class="form-check-label" for="inlineRadio4">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            ZIGBEE
+            <input class="form-check-input" type="radio" name="zigbee" id="inlineRadio5" value="True">
+            <label class="form-check-label" for="inlineRadio5">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="zigbee" id="inlineRadio5" value="False">
+            <label class="form-check-label" for="inlineRadio5">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            ZIGWAVE
+            <input class="form-check-input" type="radio" name="zigwave" id="inlineRadio6" value="True">
+            <label class="form-check-label" for="inlineRadio6">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="zigwave" id="inlineRadio6" value="False">
+            <label class="form-check-label" for="inlineRadio6">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            RS232
+            <input class="form-check-input" type="radio" name="rs_232" id="inlineRadio7" value="True">
+            <label class="form-check-label" for="inlineRadio7">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rs_232" id="inlineRadio7" value="False">
+            <label class="form-check-label" for="inlineRadio7">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            RS485
+            <input class="form-check-input" type="radio" name="rs_485" id="inlineRadio8" value="True">
+            <label class="form-check-label" for="inlineRadio8">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rs_485" id="inlineRadio8" value="False">
+            <label class="form-check-label" for="inlineRadio8">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            RS422
+            <input class="form-check-input" type="radio" name="rs_422" id="inlineRadio9" value="True">
+            <label class="form-check-label" for="inlineRadio9">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rs_422" id="inlineRadio9" value="False">
+            <label class="form-check-label" for="inlineRadio9">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            TCP
+            <input class="form-check-input" type="radio" name="tcp" id="inlineRadio10" value="True">
+            <label class="form-check-label" for="inlineRadio6">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="tcp" id="inlineRadio10" value="False">
+            <label class="form-check-label" for="inlineRadio6">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            HTTP
+            <input class="form-check-input" type="radio" name="http" id="inlineRadio11" value="True">
+            <label class="form-check-label" for="inlineRadio11">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="http" id="inlineRadio11" value="False">
+            <label class="form-check-label" for="inlineRadio11">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            MQTT
+            <input class="form-check-input" type="radio" name="mqtt" id="inlineRadio12" value="True">
+            <label class="form-check-label" for="inlineRadio12">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="mqtt" id="inlineRadio12" value="False">
+            <label class="form-check-label" for="inlineRadio12">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            Symetirc key
+            <input class="form-check-input" type="radio" name="symetric_key" id="inlineRadio13" value="True">
+            <label class="form-check-label" for="inlineRadio13">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="symetric_key" id="inlineRadio13" value="False">
+            <label class="form-check-label" for="inlineRadio13">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            x509 Certificate
+            <input class="form-check-input" type="radio" name="x509_Certificate" id="inlineRadio14" value="True">
+            <label class="form-check-label" for="inlineRadio14">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="x509_Certificate" id="inlineRadio14" value="False">
+            <label class="form-check-label" for="inlineRadio14">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            OTA
+            <input class="form-check-input" type="radio" name="ota" id="inlineRadio15" value="True">
+            <label class="form-check-label" for="inlineRadio15">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ota" id="inlineRadio15" value="False">
+            <label class="form-check-label" for="inlineRadio15">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            INPUTS
+            <input class="form-check-input" type="radio" name="inputs" id="inlineRadio16" value="True">
+            <label class="form-check-label" for="inlineRadio16">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inputs" id="inlineRadio16" value="False">
+            <label class="form-check-label" for="inlineRadio16">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            OUTPUT
+            <input class="form-check-input" type="radio" name="outputs" id="inlineRadio17" value="True">
+            <label class="form-check-label" for="inlineRadio17">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="outputs" id="inlineRadio17" value="False">
+            <label class="form-check-label" for="inlineRadio17">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            ETHERNET
+            <input class="form-check-input" type="radio" name="ethernet" id="inlineRadio18" value="True">
+            <label class="form-check-label" for="inlineRadio18">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="ethernet" id="inlineRadio18" value="False">
+            <label class="form-check-label" for="inlineRadio18">False</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            analog input
+            <input class="form-check-input" type="radio" name="analog_input" id="inlineRadio19" value="True">
+            <label class="form-check-label" for="inlineRadio19">True</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="analog_input" id="inlineRadio19" value="False">
+            <label class="form-check-label" for="inlineRadio19">False</label>
+          </div>
+
+          <div class="form-group" >
+            <label for="power">Power Supply</label>
+            <input type="float" class="form-control" id="power" name='power_supply'>
+          </div>
+
+          <div class="form-group" >
+            <label for="o1">Other1</label>
+            <input type="text" class="form-control" id="o1" name='other1'>
+          </div>
+
+          <div class="form-group" >
+            <label for="o2">Other2</label>
+            <input type="text" class="form-control" id="o2" name='other2'>
+          </div>
+
+          <div class="form-group" >
+            <label for="o3">Other3</label>
+            <input type="text" class="form-control" id="o3" name='other3'>
+          </div>
+
+          <div class="form-group">
+            <label for="security">Security Key</label>
+            <select class="form-control" id="security" name='security_key'>
+              <option>HSM</option>
+              <option>TPM</option>
+             
+            </select>
+          </div>
+
+          <input type="submit" action="devicespecpost" value="Save">
+</form>

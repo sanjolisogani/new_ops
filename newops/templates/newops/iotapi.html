@@ -1,0 +1,59 @@
+ <form action="iotpost" method="post">
+    {% csrf_token %}
+    <div class="form-group" >
+      <label for="name">HUB NAME</label>
+      <input type="text" class="form-control" id="name" name='hub_name'>
+    </div>
+    <div class="form-group" >
+        <label for="host_name">HOSTNAME</label>
+        <input type="url" class="form-control" id="host_name" name='hostname'>
+      </div>
+      
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="True" checked>
+        Status
+        <label class="form-check-label" for="gridRadios1">
+          True
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="False">
+        Status
+        <label class="form-check-label" for="gridRadios2">
+          False
+        </label>
+        <div class="form-group" >
+            <label for="location">LOCATION</label>
+            <input type="text" class="form-control" id="host_name" name='current_location'>
+          </div>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="subscription" id="gridRadios3" value="True" checked>
+        subscription
+        <label class="form-check-label" for="gridRadios1">
+          True
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="subscription" id="gridRadios4" value="False">
+        subscription
+        <label class="form-check-label" for="gridRadios2">
+          False
+        </label>
+        <br>
+        Resource Group
+        <select class="form-control" id="resourse_group" name='resourse_group'>
+        {% for g in dpsquery %} 
+            
+            
+                
+                <option value="{{g.resourse_group}}">{{g.resourse_group}}</option>
+              
+        {% endfor %}
+      </select>
+      <input type="submit" action="iotpost" value="Save">
+      </div>
+    
+   
+  </form> 

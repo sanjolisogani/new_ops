@@ -1,0 +1,78 @@
+<form action="permissionpost" method="post">
+    {% csrf_token %}
+    <div class="form-group" >
+        <label for="permission_name">permission name</label>
+        <input type="text" class="form-control" id="permission_name" name='permission_name'>
+      </div>
+    <div class="form-check form-check-inline">
+        ADD
+          <input class="form-check-input" type="radio" name="add_permission" id="inlineRadio1" value="True">
+          <label class="form-check-label" for="inlineRadio1">True</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="add_permission" id="inlineRadio1" value="False">
+          <label class="form-check-label" for="inlineRadio1">False</label>
+        </div>
+  
+  
+        <div class="form-check form-check-inline">
+          EDIT
+          <input class="form-check-input" type="radio" name="edit_permission" id="inlineRadio2" value="True">
+          <label class="form-check-label" for="inlineRadio2">True</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="edit_permission" id="inlineRadio2" value="False">
+          <label class="form-check-label" for="inlineRadio2">False</label>
+        </div>
+  
+  
+        <div class="form-check form-check-inline">
+          MODIFY
+          <input class="form-check-input" type="radio" name="modify_permission" id="inlineRadio3" value="True">
+          <label class="form-check-label" for="inlineRadio3">True</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="modify_permission" id="inlineRadio3" value="False">
+          <label class="form-check-label" for="inlineRadio3">False</label>
+        </div>
+  
+        <div class="form-check form-check-inline">
+          VIEW
+          <input class="form-check-input" type="radio" name="view_permission" id="inlineRadio4" value="True">
+          <label class="form-check-label" for="inlineRadio4">True</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="view_permission" id="inlineRadio4" value="False">
+          <label class="form-check-label" for="inlineRadio4">False</label>
+        </div>
+  
+  
+  
+        <div class="form-check form-check-inline">
+          LOG
+          <input class="form-check-input" type="radio" name="log_permission" id="inlineRadio5" value="True">
+          <label class="form-check-label" for="inlineRadio5">True</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="log_permission" id="inlineRadio5" value="False">
+          <label class="form-check-label" for="inlineRadio5">False</label>
+        </div>
+  
+  
+        <div class="form-check form-check-inline">
+          DELETE
+          <input class="form-check-input" type="radio" name="delete_permission" id="inlineRadio6" value="True">
+          <label class="form-check-label" for="inlineRadio6">True</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="delete_permission" id="inlineRadio6" value="False">
+          <label class="form-check-label" for="inlineRadio6">False</label>
+        </div>
+  
+    
+    
+          <input type="submit" action="permissionpost" value="Save">
+      </div>
+    
+   
+  </form>
